@@ -1,0 +1,8 @@
+info Database 
+
+localhost 
+admin 
+admin 
+
+db_name: blog
+table articles(id,	nom_article,author,body,created_at) 
