@@ -46,4 +46,6 @@ function getArticle($id){
     $result=$sql->fetchAll();
     return $result;
 }   
+
+
 ?>

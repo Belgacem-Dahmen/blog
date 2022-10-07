@@ -7,25 +7,29 @@
         
         <div class="container">
         <h2> Les articles du Blog</h2>
+        
         <?php 
         $articles = getAllArticles();
         foreach ($articles as $article) {
-            
-        echo("<div class="."article>");
-       
-        echo("<h3> {$article["nom_article"]} : </h3>");
-        echo("<p>  {$article["body"]} </p>"); 
+            echo("<div class="."article>");
+            echo("<h3> {$article["nom_article"]} : </h3>");
+            echo("<p>  {$article["body"]} </p>"); 
             $id=$article["id"];
-        echo ("");
+            echo ("<a href="."article.php?id={$id}"."> Voir Article </a>" );
+            echo("<button> supprimer Article </button>");
+            echo("</div>");
+        }
 
-        
-        var_dump($id);
+
+
+       
+        //var_dump($id);
 
         //echo "<a href="."article.php?id={$article["id"]}"."Voir Article </button><br></a>";
-        //echo("<button> supprimer Article </button>");
-        echo("</div>");
+        
+        
 
-        }
+        
         ?>
 
 
