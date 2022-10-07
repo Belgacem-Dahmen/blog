@@ -5,7 +5,7 @@ $article =getArticle($id);
 
 
 echo '<pre>';
-print_r($article);
+print_r(json_encode($article));
 echo '</pre>';
 ?>
 

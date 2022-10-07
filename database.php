@@ -23,6 +23,8 @@ function getAllArticles(){
     $sql->execute();
     $result = $sql->fetchAll(\PDO::FETCH_ASSOC);
 
+    //var_dump($result[1]);
+
 return  $result;
 
 } 
@@ -43,7 +45,7 @@ function getArticle($id){
     $sql="SELECT * FROM articles where id = '$id'";
     $sql=$pdo->prepare($sql);
     $sql->execute();
-    $result=$sql->fetchAll();
+    $result=$sql->fetch();
     return $result;
 }   
 
